@@ -1,0 +1,10 @@
+appId: com.studibuch.uebungsprojekt
+name: Smoke
+steps:
+  - launchApp
+  # further example steps:
+  # - waitForVisible: "home_screen_root"
+  # - assertVisible: "home_screen_root"
+  # - tap: "goToLoginButton"
+  # - waitForVisible: "login_screen_root"
+  # - assertVisible: "login_screen_root"
