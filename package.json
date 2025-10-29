@@ -14,7 +14,9 @@
     "test": "jest --passWithNoTests",
     "build:android": "eas build --platform android",
     "build:ios": "eas build --platform ios",
-    "build:preview": "eas build --profile preview --platform all"
+    "build:preview": "eas build --profile preview --platform all",
+    "tsc:check": "tsc -p tsconfig.json --noEmit",
+    "tsc:check:backend": "tsc -p backend/tsconfig.json --noEmit"
   },
   "dependencies": {
     "@expo/metro-runtime": "~5.0.4",
@@ -56,12 +58,13 @@
     "typescript": "~5.8.3"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
+    "src/**/*.{ts,tsx,js,jsx}": [
       "eslint --fix",
-      "prettier --write"
+      "git add"
     ],
-    "*.{ts,tsx}": [
-      "tsc --noEmit"
+    "backend/**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "git add"
     ]
   },
   "private": true

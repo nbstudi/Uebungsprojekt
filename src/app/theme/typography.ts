@@ -1,7 +1,7 @@
 export const typography = {
   heading: {
     fontSize: 24,
-    fontWeight: "700" as "700",
+    fontWeight: "700" as const,
   },
   subheading: {
     fontSize: 20,

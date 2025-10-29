@@ -53,3 +53,4 @@ Thumbs.db
 # IDE / Editor / Misc
 .vscode/
 *.orig.*
+/src/generated/prisma

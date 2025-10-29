@@ -2,5 +2,38 @@
   "name": "backend",
   "version": "1.0.0",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development tsx watch src/server.ts",
+    "start": "NODE_ENV=production tsx src/server.ts",
+    "build": "echo \"(optional) bundling not required for tsx runtime\"",
+    "typecheck": "tsc --noEmit",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev --name init",
+    "prisma:deploy": "prisma migrate deploy",
+    "prisma:studio": "prisma studio",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:reset": "prisma migrate reset --force --skip-seed"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "helmet": "^7.2.0",
+    "pino": "^9.14.0",
+    "pino-http": "^11.0.0",
+    "pino-pretty": "^11.2.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@prisma/client": "^6.18.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^22.8.6",
+    "@types/pino-http": "^5.8.4",
+    "prisma": "^6.18.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
 }
