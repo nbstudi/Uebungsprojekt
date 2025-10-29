@@ -2,8 +2,7 @@ import { StyleSheet, Text, View, Button } from "react-native";
 import { colors, spacing, typography } from "../theme";
 import { RootStackScreenProps } from "../types/navigation";
 
-
-type Props = RootStackScreenProps<'Profile'>;
+type Props = RootStackScreenProps<"Profile">;
 
 export default function ProfileScreen({ navigation }: Props) {
   return (
@@ -12,7 +11,7 @@ export default function ProfileScreen({ navigation }: Props) {
       <Button
         title="Zu Home"
         color={colors.secondary}
-        onPress={() => navigation.navigate('Home')}
+        onPress={() => navigation.navigate("Home")}
       />
     </View>
   );

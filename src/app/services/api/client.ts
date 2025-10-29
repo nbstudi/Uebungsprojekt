@@ -16,7 +16,7 @@ interface ApiOptions {
 export async function api<T>(
   endpoint: string,
   method: HttpMethod = "GET",
-  options: ApiOptions = {}
+  options: ApiOptions = {},
 ): Promise<T> {
   const controller = new AbortController();
   const id = setTimeout(() => controller.abort(), options.timeoutMs ?? 10000);
@@ -37,7 +37,8 @@ export async function api<T>(
 
     clearTimeout(id);
 
-    if (!res.ok) throw new Error(`API error ${res.status}: ${await res.text()}`);
+    if (!res.ok)
+      throw new Error(`API error ${res.status}: ${await res.text()}`);
     return (await res.json()) as T;
   } catch (err: any) {
     if (err.name === "AbortError") throw new Error("Request timeout");

@@ -3,8 +3,7 @@ import { StyleSheet, View, Text, Button } from "react-native";
 import { colors, spacing, typography } from "../theme";
 import { RootStackScreenProps } from "../types/navigation";
 
-
-type Props = RootStackScreenProps<'Login'>;
+type Props = RootStackScreenProps<"Login">;
 
 export default function LoginScreen({ navigation }: Props) {
   return (
@@ -13,7 +12,7 @@ export default function LoginScreen({ navigation }: Props) {
       <Button
         title="Zu Home"
         color={colors.secondary}
-        onPress={() => navigation.navigate('Home')}
+        onPress={() => navigation.navigate("Home")}
       />
     </View>
   );

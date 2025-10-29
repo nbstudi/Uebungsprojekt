@@ -34,7 +34,7 @@ jobs:
         run: npm run lint
 
       - name: Run Prettier check
-        run: prettier --check "src/**/*.{ts,tsx,js,jsx}"
+        run: npm run format:check
 
       - name: Expo doctor
         run: npx expo doctor

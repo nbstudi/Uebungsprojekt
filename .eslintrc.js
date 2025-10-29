@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
     "jest/globals": true,
-   },
+  },
   extends: [
     "@react-native",
     "plugin:@typescript-eslint/recommended",

@@ -41,6 +41,8 @@ GoogleService-Info.plist
 .env.local
 .env.*          # staging / production / preview / etc.
 !.env.example    # Beispiel darf versioniert bleiben
+/.env.production
+/.env.staging
 
 # Testing / Coverage
 coverage/

@@ -1,4 +1,4 @@
-import { prisma } from '@lib/prisma';
+import { prisma } from "@lib/prisma";
 
 export const UserRepository = {
   async findByEmail(email: string) {
@@ -6,5 +6,5 @@ export const UserRepository = {
   },
   async create(data: { email: string; passwordHash: string }) {
     return prisma.user.create({ data });
-  }
+  },
 };

@@ -12,5 +12,6 @@ interface LoginResponse {
 
 export const useLoginMutation = () =>
   useMutation({
-    mutationFn: (data: LoginInput) => api<LoginResponse>(AUTH.login, "POST", { body: data }),
+    mutationFn: (data: LoginInput) =>
+      api<LoginResponse>(AUTH.login, "POST", { body: data }),
   });

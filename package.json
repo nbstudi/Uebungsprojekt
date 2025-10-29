@@ -16,7 +16,9 @@
     "build:ios": "eas build --platform ios",
     "build:preview": "eas build --profile preview --platform all",
     "tsc:check": "tsc -p tsconfig.json --noEmit",
-    "tsc:check:backend": "tsc -p backend/tsconfig.json --noEmit"
+    "tsc:check:backend": "tsc -p backend/tsconfig.json --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@expo/metro-runtime": "~5.0.4",

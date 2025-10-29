@@ -3,7 +3,7 @@ import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 
 export type RootStackParamList = {
   Home: undefined;
-  Profile: { userId?: string } | undefined;// Beispiel mit Param
+  Profile: { userId?: string } | undefined; // Beispiel mit Param
   Login: undefined;
   Scanner: { initialMode?: "qr" | "barcode" } | undefined; // Beispiel mit optional Param
 };

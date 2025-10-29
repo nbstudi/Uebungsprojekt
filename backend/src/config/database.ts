@@ -1,5 +1,5 @@
-import { env } from './app';
+import { env } from "./app";
 
 export const dbConfig = {
-  url: env.DATABASE_URL
+  url: env.DATABASE_URL,
 };
