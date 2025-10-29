@@ -37,7 +37,7 @@ jobs:
         run: npm run format:check
 
       - name: Expo doctor
-        run: npx expo doctor
+        run: npx expo-doctor
 
       - name: Run E2E tests
         run: npx maestro test
